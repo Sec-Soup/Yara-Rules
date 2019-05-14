@@ -1,0 +1,22 @@
+rule FlawedAmmyy_050919 {
+
+/*
+Simple rule to detect multiple versions of digitally signed versions of FlawedAmmyy from March, April, and May of 2019.
+Written by Ryan Campbell @sec_soup
+*/
+
+strings:
+  $a = "AMMY" 
+  $b = "wsus.exe"
+  $c = "AlCOHOL LTD"
+  $d = "MASLAK LTD"
+  $e = "DIGITAL DR"
+  $f = "CYBASICS LTD"
+  $g = "AdFuture Ltd"
+  $h = "Atrast, OOO"
+  $i = "ANGEL AID LTD"
+
+  
+condition:
+  1 of ($a,$b,$c,$d,$e,$f,$g,$h,$i)
+ }
